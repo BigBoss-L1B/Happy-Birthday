@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Nguyen Tran Thanh Nguyen - 29/03/2025</title>
+    <title>Nguyễn Trần Thanh Nguyên - 29/03/2025</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
@@ -14,13 +14,8 @@
             font-family: 'Montserrat', sans-serif;
             cursor: none;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
         }
 
-        /* Tùy chỉnh con trỏ */
         #magic-cursor {
             position: fixed;
             width: 20px;
@@ -33,33 +28,14 @@
             z-index: 9999;
         }
 
-        @media (max-width: 768px) {
-            #magic-cursor {
-                display: none; /* Ẩn trên thiết bị cảm ứng */
-            }
-        }
-
-        /* Cấu trúc chính */
         .birthday-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100%;
             perspective: 2000px;
-            padding: 20px;
-            box-sizing: border-box;
         }
 
         .birthday-card {
-            max-width: 90vw;
-            width: 400px;
-            padding: 20px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(20px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-            text-align: center;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
             transform-style: preserve-3d;
             transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -69,15 +45,13 @@
         }
 
         .hero-title {
-            font-size: 2rem;
-            font-weight: 800;
             background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-            color: transparent;
+            -webkit-background-clip: text;  /* Safari */
+            -moz-background-clip: text;     /* Firefox */
+            background-clip: text;          /* Chuẩn */
+            -webkit-text-fill-color: transparent;  /* Safari */
+            -moz-text-fill-color: transparent;     /* Firefox */
+            color: transparent;             /* Fallback */
             animation: gradient-shift 5s ease infinite;
         }
 
@@ -87,24 +61,11 @@
             100% { background-position: 0% 50%; }
         }
 
-        @media (max-width: 768px) {
-            .birthday-card {
-                width: 80vw;
-                padding: 15px;
-            }
-            .hero-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .birthday-card {
-                width: 90vw;
-                padding: 10px;
-            }
-            .hero-title {
-                font-size: 1.2rem;
-            }
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,105,180,0.6) 100%);
+            border-radius: 50%;
+            pointer-events: none;
         }
     </style>
 </head>
